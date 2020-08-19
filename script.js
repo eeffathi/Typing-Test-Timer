@@ -16,6 +16,9 @@ function matchTexts() {
     console.log(testAreaValue);
 }
 
+function clickBtn() {
+    console.log("Reset button is clicked!");
+}
 
 
 /* EventListeners */
