@@ -7,10 +7,17 @@ var timer = [0,0,0,0];
 
 
 /* functions */
+function AddZeroForBelowTen(number) {
+    if (number <= 9) {
+        return "0" + number;
+    }
+    return number;
+}
+
 function timerFunction() {
     // timer++;
     
-    let currentTime = timer[0] + ":" + timer[1] + ":" + timer[2];
+    let currentTime = AddZeroForBelowTen(timer[0]) + ":" + AddZeroForBelowTen(timer[1]) + ":" + AddZeroForBelowTen(timer[2]);
     TIMER_TEXTFIELD.innerHTML = currentTime;
 
     timer[3]++;
