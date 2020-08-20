@@ -5,7 +5,7 @@ const TIMER_TEXTFIELD = document.querySelector(".timer");
 const TEXT_WRAPPER = document.querySelector(".test-wrapper")
 
 var timer = [0,0,0,0];
-
+var interval;
 
 /* functions */
 function AddZeroForBelowTen(number) {
@@ -33,7 +33,8 @@ function start() {
     // console.log(testAreaLength);
     // debugger;
     if(testAreaLength == 0) {
-        setInterval(timerFunction, 10);
+	console.log("interval timer has started...");
+        interval = setInterval(timerFunction, 10);
     }
 }
 
@@ -46,6 +47,9 @@ function matchTexts() {
     // console.log("originTextSubValue : " + originTextSubValue);
 
     if (testAreaValue == ORIGIN_TEXT) {
+        // debugger;
+        console.log("interval is cleared");
+        clearInterval(interval);
         TEXT_WRAPPER.style.borderColor = "green";
     }
 
