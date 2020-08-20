@@ -69,6 +69,16 @@ function matchTexts() {
 
 function clickBtn() {
     console.log("Reset button is clicked!");
+
+    clearInterval(interval);
+    interval = null; //make it 0 for testing purposes
+    isFirstTimer = true;
+    timer = [0,0,0,0];
+
+    TEST_AREA.value = "";
+    TIMER_TEXTFIELD.innerHTML = "00:00:00";
+    TEXT_WRAPPER.style.borderColor = "grey";
+    
 }
 
 
