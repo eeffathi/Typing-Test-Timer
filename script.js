@@ -1,7 +1,8 @@
 const TEST_AREA = document.querySelector("#test-area");
 const BTN_RESET = document.querySelector("#reset");
-const ORIGIN_TEXT = document.querySelector("#origin-text p");
+const ORIGIN_TEXT = document.querySelector("#origin-text p").innerHTML;
 const TIMER_TEXTFIELD = document.querySelector(".timer");
+const TEXT_WRAPPER = document.querySelector(".test-wrapper")
 
 var timer = [0,0,0,0];
 
@@ -38,7 +39,26 @@ function start() {
 
 function matchTexts() {
     let testAreaValue = TEST_AREA.value;
-    console.log(testAreaValue);
+    let originTextSubValue = ORIGIN_TEXT.substring(0, testAreaValue.length);
+
+    // console.log("ORIGIN_TEXT : " + ORIGIN_TEXT);
+    // console.log("testAreaValue :" + testAreaValue);
+    // console.log("originTextSubValue : " + originTextSubValue);
+
+    if (testAreaValue == ORIGIN_TEXT) {
+        TEXT_WRAPPER.style.borderColor = "green";
+    }
+
+    else {
+        if (testAreaValue == originTextSubValue) {
+            TEXT_WRAPPER.style.borderColor = "blue";
+        }
+        else {
+            TEXT_WRAPPER.style.borderColor = "red";
+        }
+    }
+
+    
 }
 
 function clickBtn() {
