@@ -6,6 +6,7 @@ const TEXT_WRAPPER = document.querySelector(".test-wrapper")
 
 var timer = [0,0,0,0];
 var interval;
+var isFirstTimer = true;
 
 /* functions */
 function AddZeroForBelowTen(number) {
@@ -32,8 +33,9 @@ function start() {
     let testAreaLength = TEST_AREA.value.length;
     // console.log(testAreaLength);
     // debugger;
-    if(testAreaLength == 0) {
-	console.log("interval timer has started...");
+    if(testAreaLength == 0 && isFirstTimer) {
+        isFirstTimer = false;
+	    console.log("interval timer has started...");
         interval = setInterval(timerFunction, 10);
     }
 }
