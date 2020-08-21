@@ -2,3 +2,13 @@
     border: 10px solid grey;
     border-radius: 10px;
 }
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Source Sans Pro', 'Helvetica', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
