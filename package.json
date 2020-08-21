@@ -1,0 +1,25 @@
+{
+  "name": "typing-test-timer",
+  "version": "1.0.0",
+  "description": "a timer to test your typing speed",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eeffathi/Typing-Test-Timer.git"
+  },
+  "keywords": [
+    "javascript",
+    "timer",
+    "typing-practice",
+    "typingspeedtest"
+  ],
+  "author": "Edris Fathi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eeffathi/Typing-Test-Timer/issues"
+  },
+  "homepage": "https://github.com/eeffathi/Typing-Test-Timer#readme"
+}
